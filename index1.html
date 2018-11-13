@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+ 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+ 		<title>Information Point: Materialize</title>
+
+  		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  		<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      	<script type="text/javascript">
+      	
+        		function searchPrimo() {
+            		document.getElementById("primoQuery").value = "any,contains," + 
+            			document.getElementById("primoQueryTemp").value.replace(/[,]/g, " ");
+            		document.forms["searchForm"].submit();
+        		}
+    	</script>
+	</head>
+	<body>
+	    <!-- START NAVIGATION BAR -->
+  		<nav class="indigo darken-3" role="navigation">
+    		<div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo"><img src="img/ljmulogo.png" style="height: 65px; padding: 5px;"/></a>
+      			
+    		</div>
+  		</nav>
+  		
+  		<!-- START MAIN SECTION -->
+  		<div class="section no-pad-bot" id="index-banner">
+    		<div class="container">
+      		
+      			<h2 class="header center orange-text">Search the Library</h2>
+	
+    			<form  id="simple" name="searchForm" method="get" target="_self"
+    				  action="https://ljmu-primo.hosted.exlibrisgroup.com/primo-explore/search"
+    				  enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="searchPrimo()" 
+    				  novalidate="novalidate">
+            		<input type="hidden" name="institution" value="44JMU">
+                    <input type="hidden" name="vid" value="44JMU_VU1">
+                    <input type="hidden" name="tab" value="default_tab">
+                    <input type="hidden" name="search_scope" value="default_scope">
+                    <input type="hidden" name="mode" value="Basic">
+                    <!-- Fixed parameters -->
+                    <input type="hidden" name="displayMode" value="full">
+                    <input type="hidden" name="bulkSize" value="10">
+                    <input type="hidden" name="highlight" value="true">
+                    <input type="hidden" name="dum" value="true">
+                    <input type="hidden" name="query" id="primoQuery">
+                    <input type="hidden" name="displayField" value="all">
+                    <input type="hidden" name="pcAvailabiltyMode" value="true">
+                    
+      				<div class="row center"  style="text-align: center;>
+        				<div class="input-field col s8 center"">
+          					<input placeholder="Enter your search term" type="text" 
+          						   class="validate" id="primoQueryTemp" style="width: 50%; font-size: 150%; text-align:center;">
+          			<!-- <label for="search_term">Search Term</label> -->
+        				</div>
+        			</div>
+
+      				<div class="row center">
+        				<button href="#" id="download-button" class="btn-large waves-effect waves-light indigo darken-2" onclick="searchPrimo()">Search</button>
+      				</div>
+      			</form>
+    		</div>
+  		</div>
+  		<div class="container">
+      			 <div class="carousel">
+          				<div class="card carousel-item  red white-text">
+       						 <div class="card-image">
+         						<a href="http://google.com"><img src="img/trans.png"></a>
+          						<span class="card-title">Find a PC</span>
+       						 </div>
+     					</div>
+          		
+
+          				<div class="card carousel-item yellow ">
+       						 <div class="card-image">
+         						<a href="http://google.com"><img src="img/trans.png"></a>
+          						<span class="card-title" style="color: black;">Book a Room</span>
+       						 </div>
+     					</div>
+          				<div class="card carousel-item green white-text">
+       						 <div class="card-image">
+         						<a href="http://google.com"><img src="img/trans.png"></a>
+          						<span class="card-title" >Reading List</span>
+       						 </div>
+     					</div>
+          				<div class="card carousel-item light-blue white-text" href="https://ljmu.libanswers.com/">
+       						 <div class="card-image">
+         						<a href="http://google.com"><img src="img/trans.png"></a>
+          						<span class="card-title">Library Help</span>
+       						 </div>
+     					</div>
+          				
+     				<div class="card carousel-item  orange white-text">
+       						 <div class="card-image">
+         						 <a href="http://google.com"><img src="img/trans.png"></a>
+          						<span class="card-title">Book a PC</span>
+       						 </div>
+     								
+          		</div>
+        		 </div> <!-- /CAROUSEL -->	
+        	
+	
+        </div> <!-- /CONTAINER -->
+    	<br><br>
+ <!-- </div> -->
+
+  		<footer class="page-footer orange">
+    	
+    	
+      			<div class="container">
+      				Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      			</div>
+    		
+  		</footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+        	<script type="text/javascript">
+      	
+        		function searchPrimo() {
+            		document.getElementById("primoQuery").value = "any,contains," + 
+            			document.getElementById("primoQueryTemp").value.replace(/[,]/g, " ");
+            		document.forms["searchForm"].submit();
+        		}
+        		 
+        		M.AutoInit();
+        		 
+        		document.addEventListener('DOMContentLoaded', function() {
+    				var elems = document.querySelectorAll('.carousel');
+    				var instance = M.Carousel.init({
+    fullWidth: true
+  });
+    			
+  				});
+    		
+             
+    	</script>
+
+  	</body>
+</html>
