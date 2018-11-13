@@ -17,111 +17,139 @@
         		}
     	</script>
 	</head>
-	<body>
+	<body class="indigo darken-3">
+	
 	    <!-- START NAVIGATION BAR -->
-  		<nav class="indigo darken-3" role="navigation">
-    		<div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="img/ljmulogo.png" style="height: 65px; padding: 5px;"/></a>
+  		<nav class="indigo darken-3" role="navigation" >
+    		<div class="nav-wrapper container" style="width: 90%;"><a id="logo-container" href="#" class="brand-logo"><img src="img/ljmulogo.png" style="height: 65px; padding: 5px;"/></a>
       			
     		</div>
   		</nav>
   		
   		<!-- START MAIN SECTION -->
-  		<div class="section no-pad-bot" id="index-banner">
-    		<div class="container">
-      		
-      			<h3 class="header center orange-text text-darken-2">Library Search</h3>
-	            <br/>
-    			<form  id="simple" name="searchForm" method="get" target="_self"
+ 		<div style="background-color: white;">
+  			<div class="section no-pad-bot" id="index-banner" >
+    			<div class="container ">
+      				<h3 class="header center teal-text text-lighten-1">Library Search</h3>
+	            	<br/>
+    				<form  id="simple" name="searchForm" method="get" target="_self"
     				  action="https://ljmu-primo.hosted.exlibrisgroup.com/primo-explore/search"
     				  enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="searchPrimo()" 
     				  novalidate="novalidate">
-            		<input type="hidden" name="institution" value="44JMU">
-                    <input type="hidden" name="vid" value="44JMU_VU1">
-                    <input type="hidden" name="tab" value="default_tab">
-                    <input type="hidden" name="search_scope" value="default_scope">
-                    <input type="hidden" name="mode" value="Basic">
-                    <!-- Fixed parameters -->
-                    <input type="hidden" name="displayMode" value="full">
-                    <input type="hidden" name="bulkSize" value="10">
-                    <input type="hidden" name="highlight" value="true">
-                    <input type="hidden" name="dum" value="true">
-                    <input type="hidden" name="query" id="primoQuery">
-                    <input type="hidden" name="displayField" value="all">
-                    <input type="hidden" name="pcAvailabiltyMode" value="true">
+            			<input type="hidden" name="institution" value="44JMU">
+                    	<input type="hidden" name="vid" value="44JMU_VU1">
+                    	<input type="hidden" name="tab" value="default_tab">
+                    	<input type="hidden" name="search_scope" value="default_scope">
+                    	<input type="hidden" name="mode" value="Basic">
+                    	<!-- Fixed parameters -->
+                    	<input type="hidden" name="displayMode" value="full">
+                    	<input type="hidden" name="bulkSize" value="10">
+                    	<input type="hidden" name="highlight" value="true">
+                    	<input type="hidden" name="dum" value="true">
+                    	<input type="hidden" name="query" id="primoQuery">
+                    	<input type="hidden" name="displayField" value="all">
+                    	<input type="hidden" name="pcAvailabiltyMode" value="true">
                     
-      				<div class="row center"  style="text-align: center;>
-        				<div class="input-field col s8 center"">
-          					<input placeholder="Enter your search term" type="text" 
-          						   class="validate" id="primoQueryTemp" style="width: 50%; font-size: 150%; text-align:center;">
-          			<!-- <label for="search_term">Search Term</label> -->
-        				</div>
-        			</div>
-
-      				<div class="row center">
-        				<button href="#" id="download-button" class="btn-large waves-effect waves-light indigo darken-2" onclick="searchPrimo()">Search</button>
-      				</div>
-      			</form>
-    		</div>
-  		</div>
-  		<br/><br/>
-  		<div class="container">
+      					<div class="row center">
+        					<div class="input-field col s12 center">
+        				
+          						<input placeholder="Enter your search term" type="text" 
+          						   	   class="validate" id="primoQueryTemp" style="width: 50%; font-size: 150%; ">
+          						<!-- <label for="search_term">Search Term</label> -->
+      			
+      							<button class="btn waves-effect waves-light" type="submit" name="action" onclick="searchPrimo()">
+      								Search 
+      								<i class="material-icons left">search</i>
+  								</button>
+  						
+        					</div>
+      				
+      					</div>
+      				</form>
+    			</div>
+  			</div>
+  			<br/><br/><br/>
+  		 	
+  			<div class="container" style="width: 90%;" >
   		
-  		 <div class="row center">
-  		    <div class="col s1"> <!-- spacer because 5 --> </div>
-  		    <div class="col s2"> 
-  		  				<div class="card red white-text">
-       						 <div class="card-image">
-         						<a href="https://ljmu.libanswers.com/"><img src="img/trans.png"></a>
-          						<span class="card-title">Find a PC</span>
-       						 </div>
-     					</div>
-     		</div> 
-  		    <div class="col s2"> 
-  		  				<div class="card orange white-text">
-       						 <div class="card-image">
-         						<a href="https://ljmu.libanswers.com/"><img src="img/trans.png"></a>
-          						<span class="card-title">Book a PC</span>
-       						 </div>
-     					</div>
-     		</div> 
-  		    <div class="col s2"> 
-  		  				<div class="card yellow">
-       						 <div class="card-image">
-         						<a href="https://ljmu.libanswers.com/"><img src="img/trans.png"></a>
-          						<span class="card-title black-text">Book a Room</span>
-       						 </div>
-     					</div>
-     		</div> 
-  		    <div class="col s2"> 
-  		  				<div class="card green white-text">
-       						 <div class="card-image">
-         						<a href="https://ljmu.libanswers.com/"><img src="img/trans.png"></a>
-          						<span class="card-title ">Library Help</span>
-       						 </div>
-     					</div>
-     		</div> 
-  		    <div class="col s2"> 
-  		  				<div class="card blue white-text">
-       						 <div class="card-image">
-         						<a href="https://ljmu.libanswers.com/"><img src="img/trans.png"></a>
-          						<span class="card-title">Reading List</span>
-       						 </div>
-     					</div>
-     		</div> 
-     		</div>     		
-	
-        </div> <!-- /CONTAINER -->
-    	<br><br>
- <!-- </div> -->
+  		 		<div class="row center" >
+  		 		
+  		 			<div class="col s1"> <!-- spacer because 5 --> </div>
+  		 			
+  		    		<a href="http://google.com">
+  		    			<div class="col s2"> 
+               				<div class="card">
+                 				<div class="card-image">
+                    				<img src="img/findapc.jpg"/>
+                 				</div>
+                 				<div class="card-content">
+                   					<span class="card-title">Find A PC</span>
+                 				</div>
+              				</div>
+            			</div>
+            		</a>   	
+  		    		<a href="http://google.com">
+  		    			<div class="col s2"> 
+               				<div class="card">
+                 				<div class="card-image">
+                    				<img src="img/bookapc.jpg"/>
+                 				</div>
+                 				<div class="card-content">
+                   					<span class="card-title">Book A PC</span>
+                 				</div>
+              				</div>
+            			</div>
+            		</a>   	
+  		    		<a href="http://google.com">
+  		    			<div class="col s2"> 
+               				<div class="card">
+                 				<div class="card-image">
+                    				<img src="img/bookaroom.jpg"/>
+                 				</div>
+                 				<div class="card-content">
+                   					<span class="card-title">Book A Room</span>
+                 				</div>
+              				</div>
+            			</div>
+            		</a>   	
+  		    		<a href="http://google.com">
+  		    			<div class="col s2"> 
+               				<div class="card">
+                 				<div class="card-image">
+                    				<img src="img/libraryfaqs.jpg"/>
+                 				</div>
+                 				<div class="card-content">
+                   					<span class="card-title">Library FAQs</span>
+                 				</div>
+              				</div>
+            			</div>
+            		</a>   	
+  		    		<a href="http://google.com">
+  		    			<div class="col s2"> 
+               				<div class="card">
+                 				<div class="card-image">
+                    				<img src="img/readinglists.jpg"/>
+                 				</div>
+                 				<div class="card-content">
+                   					<span class="card-title">Reading Lists</span>
+                 				</div>
+              				</div>
+            			</div>
+            		</a> 
+            		<div class="col s1"> <!-- spacer because 5 --> </div>  	
+            		            		            		            		            		
+ 				</div><!-- /ROW -->     		
+        	</div> <!-- /CONTAINER -->
+        	<br/><br/>
+        </div>
 
-  		<footer class="page-footer indigo darken-3"">
-    	
-    	
+  		<footer class="page-footer indigo darken-3" >
       			<div class="container">
       				Made by <a class="indigo darken-3" href="http://materializecss.com">Materialize</a>
       			</div>
     		
   		</footer>
+
 
 
   <!--  Scripts-->
